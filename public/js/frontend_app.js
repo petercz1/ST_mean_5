@@ -29,7 +29,7 @@ function do_data($scope, $http) {
         }
         $http.post('/api/v5/create', data).then(function (result) {
             console.log(result);
-            $scope.message = result.data.message
+            $scope.message = result.data.message;
         });
     }
 
