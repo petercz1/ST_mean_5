@@ -40,7 +40,13 @@
         </thead>
         <tbody ng-repeat="employee in employees">
             <tr>
-                <td>{{}}</td>
+                <td>{{employee._id}}</td>
+                <td><input type="text" ng-model="employee.name"></td>
+                <td><input type="text" ng-model="employee.email"></td>
+                <td><input type="text" ng-model="employee.gender"></td>
+                <td><input type="text" ng-model="employee.job"></td>
+                <td><input type="text" ng-model="employee.favorite_colors"></td>
+                <td><input type="text" ng-model="employee.name"></td>
             </tr>
         </tbody>
     </table>
