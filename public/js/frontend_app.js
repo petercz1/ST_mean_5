@@ -24,12 +24,13 @@ function do_data($scope, $http) {
             favorite_colors: $scope.input_favorite_colors,
             avatar: $scope.input_avatar
         }
-        $http.post('/api/v5/create' + data);
+        $http.post('/api/v5/create', data).then();
     }
 
     $scope.update = function (employee) {
         console.log('getting all data');
         console.log(employee);
+        $http.put('')
     }
 
     $scope.delete = function (employee) {
