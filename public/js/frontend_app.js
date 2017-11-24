@@ -27,7 +27,10 @@ function do_data($scope, $http) {
             favorite_colors: $scope.input_favorite_colors,
             avatar: $scope.input_avatar
         }
-        $http.post('/api/v5/create', data).then();
+        $http.post('/api/v5/create', data).then(function (result) {
+            console.log(result);
+            $scope.message = result.data.message
+        });
     }
 
     $scope.update = function (employee) {
