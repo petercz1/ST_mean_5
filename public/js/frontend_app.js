@@ -16,7 +16,14 @@ function do_data($scope, $http) {
 
     $scope.create = function () {
         console.log('getting all data');
-        var 
+        var data = {
+            name: $scope.input_name,
+            email: $scope.input_email,
+            gender: $scope.gender,
+            job: req.body.job,
+            favorite_colors: req.body.favorite_colors,
+            avatar: req.body.avatar
+        }
     }
 
     $scope.update = function (employee) {
