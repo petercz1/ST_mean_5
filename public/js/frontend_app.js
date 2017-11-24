@@ -30,13 +30,13 @@ function do_data($scope, $http) {
     $scope.update = function (employee) {
         console.log('getting all data');
         console.log(employee);
-        $http.put('')
+        $http.put('/api/v5/update', employee).then();
     }
 
     $scope.delete = function (employee) {
         console.log('getting all data');
         console.log(employee);
-        
+        $http.delete('/api/v5/delete/' + employee._id).then()
     }
 
 }
