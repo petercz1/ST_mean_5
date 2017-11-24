@@ -9,10 +9,14 @@ function do_data($scope, $http) {
 
     $scope.read = function () {
         console.log('getting all data');
+        $http.get('/api/v5/read').then();
     }
+
+    $scope.read();
 
     $scope.create = function () {
         console.log('getting all data');
+        var 
     }
 
     $scope.update = function (employee) {
