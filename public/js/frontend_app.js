@@ -9,7 +9,10 @@ function do_data($scope, $http) {
 
     $scope.read = function () {
         console.log('getting all data');
-        $http.get('/api/v5/read').then();
+        $http.get('/api/v5/read').then(function (results) {
+            console.log(results);
+            $scope.employees = results.data;
+        });
     }
 
     $scope.read();
