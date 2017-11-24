@@ -15,12 +15,15 @@ function do_data($scope, $http) {
         console.log('getting all data');
     }
 
-    $scope.update = function () {
+    $scope.update = function (employee) {
         console.log('getting all data');
+        console.log(employee);
     }
 
-    $scope.delete = function () {
+    $scope.delete = function (employee) {
         console.log('getting all data');
+        console.log(employee);
+        
     }
 
 }
