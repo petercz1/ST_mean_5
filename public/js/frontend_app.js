@@ -36,13 +36,19 @@ function do_data($scope, $http) {
     $scope.update = function (employee) {
         console.log('getting all data');
         console.log(employee);
-        $http.put('/api/v5/update', employee).then();
+        $http.put('/api/v5/update', employee).then(function (result) {
+            console.log(result);
+            $scope.message = result.data.message;
+        });
     }
 
     $scope.delete = function (employee) {
         console.log('getting all data');
         console.log(employee);
-        $http.delete('/api/v5/delete/' + employee._id).then()
+        $http.delete('/api/v5/delete/' + employee._id).then(function (result) {
+            console.log(result);
+            $scope.message = result.data.message;
+        })
     }
 
 }
