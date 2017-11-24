@@ -19,11 +19,12 @@ function do_data($scope, $http) {
         var data = {
             name: $scope.input_name,
             email: $scope.input_email,
-            gender: $scope.gender,
-            job: req.body.job,
-            favorite_colors: req.body.favorite_colors,
-            avatar: req.body.avatar
+            gender: $scope.input_gender,
+            job: $scope.input_job,
+            favorite_colors: $scope.input_favorite_colors,
+            avatar: $scope.input_avatar
         }
+        $http.post('/api/v5/create' + data);
     }
 
     $scope.update = function (employee) {
