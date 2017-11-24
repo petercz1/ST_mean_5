@@ -63,7 +63,7 @@ function do_create(req, res) {
   }
 
   var user = new USERCLASS(data);
-  
+
   user.save()
     .then(function (result) {
       console.log(result);
