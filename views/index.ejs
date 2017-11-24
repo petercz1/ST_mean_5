@@ -18,16 +18,23 @@
     <h2>CREATE</h2>
     <form>
         <input type="text" placeholder="name" ng-model="input_name">
-        <input type="text" pattern="name" ng-model="input_email">
-        <input type="text" pattern="name" ng-model="input_gender">
-        <input type="text" pattern="name" ng-model="input_job">
-        <input type="text" pattern="name" ng-model="input_favorite_colors">
-        <input type="text" pattern="name" ng-model="input_avatar">
+        <input type="text" placeholder="email" ng-model="input_email">
+        <input type="text" placeholder="gender" ng-model="input_gender">
+        <input type="text" placeholder="job" ng-model="input_job">
+        <input type="text" placeholder="color" ng-model="input_favorite_colors">
+        <input type="text" placeholder="avatar" ng-model="input_avatar">
         <button ng-click="create()">create new employee</button>
     </form>
     <h2>READ</h2>
     <table class="table">
-
+<thead>
+    <tr>
+        <th>_id</th>
+        <th>name</th>
+        <th>email</th>
+        <th></th>
+    </tr>
+</thead>
 
     </table>
 </body>
