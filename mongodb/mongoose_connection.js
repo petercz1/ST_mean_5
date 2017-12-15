@@ -1,14 +1,16 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27500/users',{useMongoClient: true});
+mongoose.connect('mongodb://localhost:27500/users', {
+  useMongoClient: true
+});
 
 var schema = {
-name: String,
-email: String,
-gender: String,
-job: String,
-favorite_colors: String,
-avatar: String
+  name: String,
+  email: String,
+  gender: String,
+  job: String,
+  favorite_colors: String,
+  avatar: String
 }
 
 var document = new mongoose.Schema(schema);
